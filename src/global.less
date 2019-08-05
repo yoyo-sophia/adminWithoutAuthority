@@ -1,0 +1,97 @@
+@import '~antd/lib/style/themes/default.less';
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.globalSpin {
+  width: 100%;
+  margin: 40px 0 !important;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+// 重置ant-table样式
+.ant-table-thead {
+  > tr {
+    > th {
+      text-align: center !important;
+      word-break: keep-all;
+    }
+  }
+}
+
+.ant-table-tbody {
+  > tr {
+    > td {
+      text-align: center !important;
+    }
+  }
+}
+
+.ant-table-body {
+  overflow: auto;
+}
+
+// 节点设置
+.ant-tree-iconEle {
+  display: none !important;
+}
+
+/*导入卡相关*/
+// 卡到期设置 tab
+.antd-pro-pages-card-css-index-cardExpiredWrapper {
+  .ant-tabs {
+    overflow: visible;
+  }
+}
+
+// 实名流失率
+.lossRateEmptyWrapper {
+  .ant-empty-image {
+    height: 40px;
+  }
+  .ant-empty-description{
+    color: rgba(0, 0, 0, 0.45);
+  }
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import '~antd/lib/style/themes/default.less';
+
+.content {
+  margin: 24px;
+  padding-top: @layout-header-height;
+  // table过长内容省略显示 悬浮是显示
+  table {
+    th, td {
+      white-space: nowrap;
+    }
+    tr {
+      &:hover {
+        .tableTextEllipsis {
+          width: auto;
+          text-overflow: initial;
+          overflow: initial;
+          white-space: initial;
+        }
+      }
+
+    }
+  }
+
+  .tableTextEllipsis {
+    max-width: 250px;
+    margin: 0 auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all .5s ease;
+  }
+}
